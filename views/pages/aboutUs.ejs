@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- 1) Am setat limba -->
+<html lang="en">
+    <head>
+        <!-- 2) -->
+        <title>Performance Wheels</title>
+        <meta name="keywords" content="Wheels Auto, wheels, review wheels auto, wheels offer, wheels package, performance wheels">
+        <meta name="description" content="Performance wheels are a great way to accelerate your car or truck. The right wheels can make a world of difference.">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .cars{
+                background-image: url("Resources/Images/supercars.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                /** ia 100% procent din viewport **/
+                height: 100vh;
+            }
+        </style>
+        <!-- includem head -->
+        <%- include("../fragments/head.ejs") %>   
+    </head>
+    <!-- 4) impartire body -->
+    <body>
+        <!-- includem header -->
+        <%- include("../fragments/header.ejs") %>    
+        <div class="cars"></div>
+        <main>
+           Buna searaSSS
+        </main>
+        <!-- includem si footerul -->
+        <%- include("../fragments/footer.ejs") %>   
+    </body>
+</html>

@@ -1,0 +1,81 @@
+/** pe ecran de 750px se afiseaza hamburger icon **/
+#hamburger {
+    display: block;
+    height: var(--height-menu);
+}
+
+#hamburger img {
+    height: 100%;
+    width: auto;
+}
+
+/* afisare casuta */
+ul.menu li.home b{
+    display: none;
+}
+
+ul.menu {
+    display: none;
+    animation-name: animation-rotation;
+    animation-duration: 1s;
+    /* sa mearga o singura data */
+    animation-iteration-count: 1;
+    /* animatia sa se scaleze din stanga sus */
+    transform-origin: 0 0;
+    /** viteza constanta de derulare **/
+    animation-timing-function: linear;
+}
+/** sa apara in icon-ul hamburger la click -- toate butoanele **/
+#ch-menu:checked~ul.menu {
+    display: block;
+}
+/** + frate imediat 
+    ~ orice frate din dreapta
+**/
+
+/** face submeniul sa apara pe tot ecranul **/
+ul.menu li {
+    width: 100% !important;
+}
+/** face meniul pe tot ecranul **/
+ul.menu li {
+    width: 100%;
+}
+
+/** dezactivare animatie submeniu **/
+ul.menu>li:hover ul {
+    animation: none;
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+@keyframes animation-rotation { 
+    0% {
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/** scoate spatierea celulelor pe ecran mic **/
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0;
+}
+
+/** scrollbar ecran mic **/
+div.scrollbar {
+    margin: 4px, 4px;
+    padding: 4px;
+    background-color: #08c708;
+    width: 300px;
+    overflow: auto;
+    white-space: nowrap;
+}

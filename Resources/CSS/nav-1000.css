@@ -1,0 +1,55 @@
+/** pe ecran de 999px **/
+#house {
+    display: block;
+    height: var(--height-menu);
+}
+
+#house i {
+    height: 100%;
+    width: auto;
+}
+
+ul.menu {
+    display: none;
+    animation-name: animation-rotation;
+    animation-duration: 1s;
+    transform-origin: 0 0;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+/** sa apara in icon-ul home la click -- toate butoanele **/
+#med-menu:checked~ul.menu {
+    display: block;
+}
+
+/** textul se micsoreaza automat **/
+body {
+    text-size-adjust: auto;
+}
+
+/** face submeniul sa apara pe tot ecranul **/
+ul.menu li {
+    width: 100% !important;
+}
+
+/* afisare casuta */
+ul.menu li.home b{
+    display: none;
+}
+
+/** face meniul pe tot ecranul **/
+ul.menu li {
+    width: 100%;
+}
+
+@keyframes animation-rotation { 
+    0% {
+        transform: rotate(60deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,66 @@
+{
+	"cale_galerie":"Resources/Images/gallery",
+	"images": [
+		{
+			"fisier":"4LUG.png",
+			"titlu":"4LUG Steel",
+			"descriere":" 4LUG Steel",
+			"timp":"08:00-10:00"
+		},
+		{
+			"fisier":"17''STEEL_WHEEL5LUG.png",
+			"titlu":"17''STEEL WHEEL 5 LUG",
+			"descriere":" 17''STEEL WHEEL 5 LUG",
+			"timp":"10:00-12:00"
+			
+		},
+		{
+			"fisier":"2013-2022_Doge_Rim.png",
+			"titlu":"2013-2022 Doge Rim",
+			"descriere":" 2013-2022 Doge Rim",
+			"timp":"12:00-14:00"
+		},
+		{
+			"fisier":"Chevy-GMC.png",
+			"titlu":"Chevy-GMC",
+			"descriere":" Chevy-GMC",
+			"timp":"14:00-16:00"
+		},
+		{
+			"fisier":"Road-17''Steel_Rim.png",
+			"titlu":"Road-17''Steel Rim",
+			"descriere":" Road-17''Steel Rim",
+			"timp":"16:00-17:00"
+		},
+		{
+			"fisier":"RT-17''STEEL_WHEEL_6LUG.png",
+			"titlu":"RT-17''STEEL WHEEL 6 LUG",
+			"descriere":" RT-17''STEEL WHEEL 6 LUG",
+			"timp":"17:00-18:00"
+		},
+		{
+			"fisier":"SRW-2500.png",
+			"titlu":"SRW-2500",
+			"descriere":" SRW-2500",
+			"timp":"18:00-19:00"
+		},
+		{
+			"fisier":"STL22515U_DODGE.png",
+			"titlu":"STL22515U DODGE",
+			"descriere":" STL22515U DODGE",
+			"timp":"22:00-22:30"
+		},
+		{
+			"fisier":"2003-2013_17x7.5_Dodge_Ram.png",
+			"titlu":"2003-2013 17x7.5 Dodge Ram",
+			"descriere":" 2003-2013 17x7.5 Dodge Ram",
+			"timp":"22:30-23:00"
+		},
+		{
+			"fisier":"16_Inch_New_Steel.png",
+			"titlu":"16 Inch New Steel",
+			"descriere":" 16 Inch New Steel",
+			"timp":"23:00-23:59"
+		}
+	]
+}

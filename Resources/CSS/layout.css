@@ -1,0 +1,258 @@
+body{
+    /** astea sunt variabilele **/
+    --margin-main: 0.3%;
+    --background-body: white;
+    --text-color: black;
+    --main-color: white;
+    --bgd-main-color: whitesmoke;
+    --grid-color: black;
+    --header-color: #89CFF0;
+    --footer-color: #333333;
+    --caption-color: #89CFF0;
+    --oddrow-color: #89CFF0;
+    --evenrow-color: aqua;
+    --border-color: black;
+    --downbutton-color: whitesmoke;
+    --borderbutton-color: #89CFF0;
+    --arrow-color: #89CFF0;
+    --bold-color: white;
+    --body-dark-bgd: black;
+    --body-dark-text: black;
+    --downbutton-color: #333333;
+    --text-color-iframe: #89CFF0;
+    --video-border: #89CFF0;
+    --iframe-tabs-hover: whitesmoke;
+    --iframe-text-color: black;
+    --iframe-tabs-border: #89CFF0;
+    background-color: var(--background-body);
+    color: var(--text-color); 
+}
+
+body.dark{
+    --background-body: var(--body-dark-bgd);
+    --text-color: var(--body-dark-text);
+}
+
+body.dark main{
+    background-color: var(--main-color);
+}
+
+header{
+    background-color: var(--header-color);
+}
+
+main{
+    background-color: var(--bgd-main-color);
+    /** muta grid ul cu 0.3% spre mijloc si face marginile exterioare cu alb **/ 
+    margin-left: var(--margin-main);
+    margin-right: var(--margin-main);
+    text-align: center;
+}
+
+footer{
+    background-color: var(--footer-color);
+}
+
+#grid-pag{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "alloy-zone alloy-zone alloy-zone alloy-zone"
+                         "steel-zone steel-zone steel-zone steel-zone"
+                         "reviews-zone packages-zone packages-zone delivery-zone"
+                         "topSell-zone topSell-zone topSell-zone topSell-zone"
+                         "newsletter-zone newsletter-zone prizes-zone prizes-zone";                      
+}
+
+#grid-pag > *{
+    border: 1px solid var(--grid-color);
+}
+
+#alloy{ 
+    grid-area: alloy-zone;
+}
+
+#steel{
+    grid-area: steel-zone;
+}
+
+#packages{
+    grid-area: packages-zone;
+}
+
+#reviews{
+    grid-area: reviews-zone;
+}
+
+#topSell{
+    grid-area: topSell-zone;
+}
+
+#delivey{
+    grid-area: delivery-zone;
+}
+
+#newsletter{
+    grid-area: newsletter-zone;
+}
+
+#prizes{
+    grid-area: prizes-zone;
+}
+
+/** cand redimensionam sub 700px screen-ul o sa avem o singura coloana --- la 701px avem iar 4 coloane **/
+@media screen and (max-width:700px) {
+    #grid-pag{
+        display: block;
+    }
+}
+/** 2) functia calc care ajuta la crearea unei formule pt resize 
+       functia calculeaza font size ca 15px + 0.00390625% din width-ul screen-ului 
+       aceste valori au fost alese specific pt ca acestea rezoneaza perfect cu orice breakpoint
+**/ 
+html{
+    font-size: calc(15px + 0.390625vw);
+    transition: all 0.3s linear;
+}
+/** comanda pt a umple spatiul gol dintre header si top **/ 
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+.header h1{
+    margin: 0;
+}
+
+h1 b{
+    color: var(--bold-color);
+}
+
+/** Stilizare tabel **/
+table.winners-table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+caption {
+    caption-side: bottom;
+    color: var(--caption-color);
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+}
+
+tr.odd {
+    background-color: var(--oddrow-color);
+}
+
+tr.even {
+    background-color: var(--evenrow-color);
+}
+
+tr.odd:hover {
+    background-color: var(--evenrow-color);
+}
+
+tr.even:hover {
+    background-color: var(--oddrow-color);
+}
+
+td.cell:hover { 
+    background-color: var(--evenrow-color);
+}
+
+/** sageata cu efect topback **/
+#arrow {
+    width: 0;
+    height: 0;
+    transition-duration: 1s;
+    position: absolute;
+    right: 43px;
+    bottom: 55px;
+    opacity: 100%;
+    font-size: 45px;
+    color: var(--arrow-color);
+}
+
+/* creare chenar 
+    - pozitie fixa sa vina cu scroll ul 
+*/
+#downbutton {
+    transition-duration: 2s;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-style: solid;
+    height: 50px;
+    width: 55px;
+    border-color: var(--borderbutton-color);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: var(--downbutton-color);
+    opacity: 20%;
+}
+
+#downbutton:hover{
+    transition-duration: 2s;
+    background-color: var(--downbutton-color);
+    opacity: 80%;
+}
+
+#downbutton:hover #arrow{
+    transition-duration: 2s;
+    font-size: 50px;
+}
+
+/* creare si stilizare taburi iframe */
+.tabs-iframe a { 
+    /* scoate underline-ul de link */
+    text-decoration:none;
+    /* aici avem chenarul */
+    border:1px solid var(--iframe-tabs-border);
+    /** pentru parte de sus ingrosam borderul **/
+    border-top: 6px solid var(--iframe-tabs-border);
+
+    /* rontujire colturi jos stanga-dreapta */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    /* background ul unde e sunt butoanele */
+    background-image: linear-gradient(white, #89CFF0 100%);
+    color: var(--iframe-text-color);
+    /* tranzitie redimensionare font la reload */
+    transition:all 0.5s linear;
+    /** lipire butoane **/
+    font-size: 30px;
+}
+/* lipire butoane */
+.tabs-iframe {
+    font-size: 0px;
+    /* DE MODIFICAT PLUS ICON STATIC FONT AWESOME 
+    display: inline-block;
+    text-align: right; */
+}
+
+.tabs-iframe a:hover {
+    /* text color */
+    color: var(--text-color-iframe);
+    /* sa se vada imaginea din spate */
+    background-image: none;
+    /* background */
+    background-color: var(--iframe-tabs-hover);
+}
+/* border video */
+iframe.vidd {
+    border-style: solid;
+    border-color: var(--video-border);
+    /* am gasit proprietatea care dubleaza width-ul borderului -> in cazul de fata cu 0.5 mai mult width fata de borderul initial */
+    border-width: 0.5em;
+}
+/* displayin' table */
+table.winners-table {
+    display: table;
+    border-collapse:separate; 
+    border-spacing: 4px;
+    border: 0px; 
+}
+
+
+

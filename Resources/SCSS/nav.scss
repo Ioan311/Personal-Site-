@@ -1,0 +1,148 @@
+body{
+    /** butoanele sa se opreasca la 25 de px **/
+    --height-menu: 25px;
+    --width-button: 373px;
+    --color-menu: #89CFF0;
+    --submenu-text: black;
+    --selected-color-menu: whitesmoke;
+    --submenu-text-color: #89CFF0;
+    background-color: whitesmoke;
+}
+
+%fictive{
+    width: var(--width-button); 
+    height: var(--height-menu);
+}
+
+%fict {
+    color: var(--submenu-text);
+    /** pune cursorul pe toate celula **/
+    cursor: pointer;
+    /** tranzitie - dureaza o sec si este constanta **/ 
+    transition: all 0.5s linear;
+    /** sterge underline-ul **/
+    text-decoration: none;
+    background-color: var(--color-menu);
+}
+/** mereu ii facem display continerului **/
+ul.menu {
+    display: flex;
+    /** scoate punctul de la lista **/
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    a {
+        @extend %fict;
+    }
+    div {
+        &:hover {
+            background-color: var(--selected-color-menu);
+        }
+        @extend %fict;
+    }
+    ul {
+        list-style-type: none;
+        /** face ca submeniul sa se afiseze deasupra contentului **/
+        z-index: 10px;
+        position: relative;
+        left: -1px;
+        /** aliniaza submeniul **/
+        padding: 0;
+        margin: 0;
+        /** scalare pe verticala de la jumate **/
+        transform: scale(0.5, 0);
+        /** face sa nu mai apara elemente ciudate din submeniu pe ecran de 750px **/
+        display: none;
+
+        li {
+            border: 1px solid black;
+            @extend %fictive;
+        }
+    }
+    li {
+        a {
+            /** face sa se vada cursorul daca e tinut oriunde in submeniu **/ 
+            display: block;
+            height: 100%;
+
+            &:hover{
+                background-color: var(--selected-color-menu);
+            }
+        }
+
+        &:hover {
+            ul {
+                animation-name: submenu_animation;
+                animation-duration: 0.5s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                /** ca sa ramana pe fundal **/
+                animation-fill-mode: forwards;
+                /** la 0 la suta nu se vede **/
+                opacity: 0;
+                /** face sa nu mai apara elemente ciudate din submeniu pe ecran de 750px **/
+                display: block;
+            }
+        }
+        ul {
+            li {
+                a {
+                    &:hover {
+                        /** schimbare culoare text submeniu la hold click 5) c) **/
+                        color: var(--submenu-text-color);
+                    }
+                }
+            }
+        }
+    }
+    > li {
+        @extend %fictive;
+        /** overflow se ocupa cu ce iese din box ul elem **/ 
+        overflow: hidden;
+        line-height: var(--height-menu);
+        /** aliniere la mijlocul liniei de text **/
+        vertical-align: middle;
+        text-align: center;
+
+        &:hover {
+            /** starea hover = numai cand vin cu cursorul pe elem  **/
+            overflow: visible;
+        }
+    }
+}
+
+/** animatie cu scalarea submeniului 5) b) **/
+@keyframes submenu_animation {
+    50%{
+        transform: scale(0.5, 1);
+    }   
+    100%{
+        transform: scale(1, 1);
+        opacity: 1;
+    } 
+}
+
+#hamburger, #ch-menu { 
+    display: none;
+}
+
+#house, #med-menu {
+    display: none;
+}
+
+/** aliniaza checkbox-ul cu butoanele meniului **/ 
+nav {
+    height: var(--height-menu);
+    background-color: var(--color-menu);
+    overflow: visible;
+    position: relative;
+}
+
+/* scoatere bold */
+ul.menu li.home b{
+    font-weight: normal !important;
+}
+
+/* Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process */

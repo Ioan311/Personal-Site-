@@ -1,0 +1,226 @@
+body{
+    /** butoanele sa se opreasca la 25 de px **/
+    --height-menu: 25px;
+    --width-button: 373px;
+    --color-menu: #89CFF0;
+    --submenu-text: black;
+    --selected-color-menu: whitesmoke;
+    --submenu-text-color: #89CFF0;
+    --underline-menu-bar-left-color: whitesmoke;
+    --underline-menu-bar-right-color: #89CFF0;
+    --border-submenu-color: black;
+    background-color: whitesmoke;
+}
+/** mereu ii facem display continerului **/
+ul.menu {
+    display: flex;
+    /** scoate punctul de la lista **/
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+ul.menu li a {
+    /** face sa se vada cursorul daca e tinut oriunde in submeniu **/ 
+    display: block;
+    height: 100%;
+}
+
+/** pt a lua fiii directi **/
+ul.menu>li {
+    height: var(--height-menu);
+    /** overflow se ocupa cu ce iese din box ul elem **/ 
+    overflow: hidden;
+    line-height: var(--height-menu);
+    /** aliniere la mijlocul liniei de text **/
+    vertical-align: middle;
+    /**
+    border: 1px solid black; **/
+    width: var(--width-button);
+    text-align: center;
+}
+/** selectorul " " se duce in tot subarborele **/ 
+ul.menu ul {
+    list-style-type: none;
+    /** face ca submeniul sa se afiseze deasupra contentului **/
+    z-index: 10px;
+    position: relative;
+    left: -1px;
+    /** aliniaza submeniul **/
+    padding: 0;
+    margin: 0;
+    /** scalare pe verticala de la jumate **/
+    transform: scale(0.5, 0);
+    /** face sa nu mai apara elemente ciudate din submeniu pe ecran de 750px **/
+    display: none;
+}
+
+ul.menu li:hover ul{
+    animation-name: submenu_animation;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    /** ca sa ramana pe fundal **/
+    animation-fill-mode: forwards;
+    /** la 0 la suta nu se vede **/
+    opacity: 0;
+    /** face sa nu mai apara elemente ciudate din submeniu pe ecran de 750px **/
+    display: block;
+}
+
+ul.menu ul li {
+    height: var(--height-menu);
+    border: 1px solid var(--border-submenu-color);
+    width: var(--width-button); 
+}
+
+ul.menu li a:hover, ul.menu div:hover {
+    background-color: var(--selected-color-menu);
+}
+/** schimbare culoare text submeniu la hold click 5) c) **/
+ul.menu li ul li a:hover {
+    color: var(--submenu-text-color);
+}
+
+/** starea hover = numai cand vin cu cursorul pe elem  **/
+ul.menu>li:hover {
+    overflow: visible;
+}
+
+ul.menu a, ul.menu div {
+    color: var(--submenu-text);
+    /** pune cursorul pe toate celula **/
+    cursor: pointer;
+    /** tranzitie - dureaza o sec si este constanta **/ 
+    transition: all 0.5s linear;
+    /** sterge underline-ul **/
+    text-decoration: none;
+    background-color: var(--color-menu);
+}
+
+/** animatie cu scalarea submeniului 5) b) **/
+@keyframes submenu_animation {
+    50%{
+        transform: scale(0.5, 1);
+    }   
+    100%{
+        transform: scale(1, 1);
+        opacity: 1;
+    } 
+}
+
+#hamburger, #ch-menu { 
+    display: none;
+}
+
+#house, #med-menu {
+    display: none;
+}
+
+/** aliniaza checkbox-ul cu butoanele meniului **/ 
+nav {
+    height: var(--height-menu);
+    background-color: var(--color-menu);
+    overflow: visible;
+    position: relative;
+}
+
+/* scoatere bold */
+ul.menu li.home b{
+    font-weight: normal !important;
+}
+
+/* aici am avut o incercare pt underline-ul meniului */
+ul.menu>li:hover {
+    position: relative;
+    /* ca sa imi puna bara jos */
+    padding: 0px 0px 10px;
+    background-image: linear-gradient(to left top, var(--underline-menu-bar-left-color), var(--underline-menu-bar-right-color));
+    /* sa nu creasca scrisul foarte mult */ 
+    font-size: 1.125rem;
+}
+/* etapa 3 ultimul task */
+.print-menu {
+    display: none;
+}
+#absolut, #watermark {
+    display: none;
+}
+@media print {
+    .hid {
+      display: none;
+    }
+    .link_top {
+      display: none;
+    }
+    #watermark {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      color: rgba(0, 0, 0, 0.4);
+      right: 0;
+    }
+    #watermark::after {
+      width: 4cm;
+      height: 1cm;
+      opacity: 0.4;
+      padding: 5px;
+      display: block;
+      background: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      font-weight: bold;
+      content: "Copyright Marcu Ioan";
+    }
+    h1 {
+        page-break-after: always;
+		margin-bottom: 70%;
+		text-align:center;
+		margin-left:1cm;
+    }
+    #absolut {
+        position: absolute;
+		display: inline-block;
+		top:100%;
+		width:20px;
+		height:20px;
+		right:0;
+		overflow: visible;
+    }
+    .menu {
+      display: grid;
+      page-break-after: always;
+    }
+    main {
+      page-break-after: always;
+    }
+    #grid-pag{
+		font-size: 10px;
+		box-sizing:border-box;
+		page-break-before:always;
+		background-color: white;
+		display:block;
+	}
+
+    @page:left {
+      margin-left: 3cm;
+      margin-right: 1cm;
+    }
+    @page:right {
+      margin-left: 1cm;
+      margin-right: 3cm;
+    }
+    @page {
+      size: A4 portrait;
+	  margin-bottom:2cm;
+	  margin-top:2cm;
+	  counter-increment: page;
+    }
+  }
+
+
+
+
+
+      

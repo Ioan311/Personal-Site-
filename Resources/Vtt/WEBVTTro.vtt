@@ -1,0 +1,10 @@
+WEBVTT
+
+STYLE
+::cue {
+    background-color: black;
+    opacity: 0.3;
+}
+
+00:00.000 --> 00:02.000 line: 0 position: 50% allign: center size: 40%
+Personalizati-va roata! 

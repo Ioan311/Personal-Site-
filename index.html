@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- 1) Am setat limba -->
+<html lang="en">
+    <head>
+        <!-- 2) -->
+        <title>Performance Wheels</title>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="Wheels Auto, wheels, review wheels auto, wheels offer, wheels package, performance wheels">
+        <meta name="description" content="Performance wheels are a great way to accelerate your car or truck. The right wheels can make a world of difference.">
+        <meta name="author" content="Marcu Ioan">
+        <!-- 3) logo tab -->
+        <link rel="apple-touch-icon" sizes="180x180" href="Resources/Images/ico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Resources/Images/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Resources/Images/ico/favicon-16x16.png">
+        <link rel="manifest" href="Resources/Images/ico/site.webmanifest">
+        <link rel="mask-icon" href="Resources/Images/ico/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="Resources/Images/ico/favicon.ico">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-config" content="Resources/Images/ico/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- adaugare logo casuta meniu -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Etapa 2 legatura cu layout.css -->
+        <link rel="stylesheet" href="Resources/CSS/layout.css" type="text/css" />
+        <link rel="stylesheet" href="Resources/CSS/nav.css" type="text/css" />
+        <link rel="stylesheet" href="Resources/CSS/nav-750.css" type="text/css" media="screen and (max-width:750px)" />
+        <link rel="stylesheet" href="Resources/CSS/nav-1000.css" type="text/css" media="only screen and (min-width:751px) and (max-width:999px)" />
+        <!-- <link rel="stylesheet" href="Resources/SCSS/nav.css" type="text/css" /> 
+            navigatie generata prin scss care funtioneaza la fel ca cea originala 
+        --> 
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .cars{
+                background-image: url("Resources/Images/supercars.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                /** ia 100% procent din viewport **/
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <!-- 4) impartire body -->
+    <body>
+        <header>
+            <div class="header">
+                <!-- 5) navigatie -->
+                <h1><b>W</b>heels <b>A</b>uto</h1>
+                <nav>
+                    <label id="house" for="med-menu" >
+                        <i class="fa fa-home"></i>
+                    </label>
+                    <input id="med-menu" type="checkbox">
+                    <label id="hamburger" for="ch-menu">
+                        <img src="Resources/Images/Hamburger_icon_alb.png" alt="menu">
+                    </label> 
+                    <input id="ch-menu" type="checkbox">
+                    <ul class="menu">
+                        <li class="home"><a href="index.html"><i class="fa fa-home"></i><b>Home</b></a></li>
+                        <li><div>New Releases</div>
+                            <ul>
+                                <li><a href="#alloy">..alloy..</a></li>
+                                <li><a href="#steel">..steel..</a></li>
+                                <li><a href="#packages">..packages..</a></li>
+                                <li><a href="#reviews">..reviews..</a></li>
+                                <li><a href="#delivery">..delivery..</a></li>
+                                <li><a href="#topSell">..topselling..</a></li>
+                                <li><a href="#newsletter">..newsletter..</a></li>
+                                <li><a href="#prizes">..prizes..</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <li><div>Products</div>
+                            <ul>
+                                <li><a href="wheels.html">Wheels</a></li>
+                                <li><a href="accessories.html">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contactsupport.html">Contact&Support</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="cars"></div>
+        <main>
+            <!-- 6 - 7 impartire in headere + minim 2 taguri per section  -->
+            <!-- Etapa 2 impartire grid -->  
+            <div id="grid-pag">
+                <section id="alloy">
+                    <h2>Alloy Wheels</h2>
+                    <p>Are alloy wheels for you? You can use these wheels to upgrade your engine and improve power and acceleration.</p>
+                    <blockquote cite="https://www.munstertyresandservicing.co.uk/news/why-choose-alloy-wheels/">It goes without saying that the wheels are one of the most important parts of your car, responsible for transferring the engine's power to the road and steering, as well as ensuring your ride isn't too bumpy.</blockquote>
+                    <br>
+                    <br>
+                    <br>
+                </section>
+                <section id="steel">
+                    <h2>Steel Wheels</h2>
+                    <p>Steel wheels are available in a variety of designs and sizes. Here are a few of the design types.</p>
+                    <blockquote cite="https://www.blackburnwheels.com/alloy-wheels-vs-steel-wheels-pros-cons-guide/">For drivers looking for a cheaper more durable alternative, steel wheels are the way to go. Steel wheels are significantly an ideal choice for use in the Winter and for more powerful vehicles.</blockquote>
+                    <!-- 8) adaugare poza + redimensionari-->
+                    <figure style="width: 20%;">
+                        <picture>
+                            <source srcset="Resources/Images/Proline700px.jpg" media="(max-width: 700px)" /> 
+                            <source srcset="Resources/Images/Proline1200px.jpg" media="(max-width: 1200px)" />
+                            <img src="Resources/Images/ProlineUX100.jpg" style="width: 100%;" alt="Proline UX100 Black Glossy" />
+                            <!-- alt = daca nu apare poza primim un mesaj -->
+                        </picture>
+                        <figcaption style="text-align: center; color:black; width: 100%;">Proline UX100 Black Glossy</figcaption>
+                        <!-- pt adaugare titlu centrat -->
+                    </figure>
+                    <br>
+                    <br>
+                    <br>
+                </section>
+                <section id="packages">
+                    <h2>Packages</h2>
+                    <p>Wheels packages are easy to make and often serve as elegant and affordable gifts. Here's how to put them together.</p>
+                    <!-- description list -->
+                    <dl>
+                        <!-- 10 c) atentionare cu bold || e) taiere si inlocuire text -->
+                        <dt><strong>4 Alloy Wheels Package</strong></dt>
+                        <!-- strong iti bolduieste -->
+                        <dd>Improve your car performance - Limited offer <s>20%</s> <ins>45%</ins></dd>
+                        <!-- s iti taie scrisul, iar ins ti-l inlocuieste pe acela taiat -->
+                        <dt><strong>Double pack of two steel wheels</strong></dt>
+                        <dd>Improve your car performance - Limited offer <s>30%</s> <ins>55%</ins></dd>
+                    </dl>
+                    <!-- 11 d) download tag -->
+                    <p>Also check our special prices</p>
+                    <!-- 12) summary/details -->
+                    <details>
+                        <!-- details face acel open-close -->
+                        <summary>Silver</summary>
+                        <p>WH24 Silver</p>
+                    </details>
+                    <details>
+                        <summary>Black</summary>
+                        <p>Evo Black Mirror</p>
+                    </details>
+                    <a href="Resources/Images/special.jpg" download>
+                        <img src="Resources/Images/special.jpg" alt="Special price">
+                    </a>
+                    <br>
+                    <br>
+                    <br>
+                </section>
+                <section id="reviews">
+                    <h2>Reviews</h2>
+                    <p>Wheels is a new way of looking at the world. Here you can find some reviews of the best wheels on the market.</p>
+                    <dl>
+                        <dt>Anonymous user ☆☆☆☆☆</dt>
+                        <!-- 10 a) bolduit cu <b> -->
+                        <dd><b>Diversity and innovation. Family feel.</b></dd>
+                        <dt>Anonymous user ☆☆☆☆☆</dt>
+                        <dd><b>Great support from supervision and team.</b></dd>
+                        <dt>Anonymous user ☆☆☆☆☆</dt>
+                        <dd><b>Great work environment and kind coworkers.</b></dd>
+                    </dl>
+                    <br>
+                    <br>
+                    <br>
+                </section>
+                <section id="delivery">
+                    <img src="Resources/Images/delivery.png" style="width: 100%;" alt="Delivery Informations" />
+                    <p><b>Great delivery services☆☆☆</b></p> 
+                </section>
+                <section id="topSell">
+                    <h2>Top Selling Wheels</h2>
+                    <p>Wheels by the ultimate wheel builder made by the pros, for the pros.</p>
+                    <ol>
+                        <li>Angel Black Polished - By GMP Italia</li>
+                        <li>Stellar Black Polished - By GMP Italia</li>
+                        <li>Motion 2 Black Red Lip  - By Calibre</li>
+                    </ol>
+                    <!-- 11 a) link catre alt site -->
+                    <p>To make sure you make the right choice we have prepared a guide for sizing below.</p>
+                    <p>Take a look <a href="https://www.wikihow.com/Select-Rims-for-Your-Car" target="_blank"><b>here</b>.</a></p>
+                    <!-- 12 b) adaugare video + adaugare link-uri catre 2 video-uri -->
+                    <p>Inspired by the most recognized partner ⚙️</p>   
+                    <iframe class="vidd" name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/YcdiMdxxTXk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="tabs-iframe ">
+                        <a target="ifr-video" href="https://www.youtube.com/embed/YcdiMdxxTXk">Pro 1</a>
+                        <a target="ifr-video" href="https://www.youtube.com/embed/yuosBPtaSXs">Pro 2</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </section>
+                <section id="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to our newsletter and get 5% extra discount on your purchases</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </section>
+                <section id="prizes">
+                    <p>When you subscribe to our newsletter you will automatically be entered into our raffle for a set of limited edition aluminium wheels </p>
+                    <div class="scrollbar">
+                    <table class="winners-table">
+                        <caption><b>Monthly Winners</b></caption>
+                        <thead>
+                            <!-- tr->defineste rand || th->defineste o celula header  -->
+                            <tr>
+                                <th>ID</th>
+                                <th>Winner</th>
+                                <th>City</th>
+                                <th>Prize</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="even">
+                                <td>001</td>
+                                <td>Jhonny</td>
+                                <td>Nice</td>
+                                <td>Bola FP2 (FORGED) Custom Colour</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>002</td>
+                                <td>Juan Angel</td>
+                                <td>Granada</td>
+                                <td>Judd Model One Gloss Black </td>
+                            </tr>
+                            <tr class="even">
+                                <td>003</td>
+                                <td>Emilio Lasso</td>
+                                <td>Lisbon</td>
+                                <td>Vossen Forged CG-204 Custom Colour Wider Rear</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>004</td>
+                                <td>Brian Wilson</td>
+                                <td>Atlanta</td>
+                                <td>Romac Diablo Black Polished Wider Rear</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="cell" colspan="4">Prizes Value: 22.000€</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <!-- 11 b) link inceput pag -->
+            <a href="#"><div title="Back to Top" id="downbutton"><div id="arrow">&#129081;</div></div></a>
+            <!-- 13 telefon/mail/locatie/wapp chat -->
+            <address>
+                <a href="tel:+0711990000">Phone</a>
+                <a href="mailto:user000@gmail.com">Mail</a>
+                <a href="https://www.google.com/maps/dir//Facultatea+de+Matematic%C4%83+%C8%99i+Informatic%C4%83,+Strada+Academiei+14,+Bucure%C8%99ti+010014/@44.4406657,26.0968301,13.79z/data=!4m17!1m7!3m6!1s0x40b1ff472f47f047:0x493984726f0235f9!2sFacultatea+de+Matematic%C4%83+%C8%99i+Informatic%C4%83!8m2!3d44.4355355!4d26.0995867!15sChdmYWN1bHRhdGUgZGUgbWF0ZW1hdGljYVoZIhdmYWN1bHRhdGUgZGUgbWF0ZW1hdGljYZIBEmZhY3VsdHlfb2Zfc2NpZW5jZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSemIySlhlRGRuUlJBQuABAA!4m8!1m0!1m5!1m1!1s0x40b1ff472f47f047:0x493984726f0235f9!2m2!1d26.0995867!2d44.4355355!3e3" target="_blank">Location</a>
+                <a href="https://wa.me/+5511999999900">Whatsapp chat</a>
+            </address>
+            <!-- 14) copyright + time/datetime-->
+            <small>&#169;2022 Bucharest Romania, Inc.All rights reserved.
+                <time datetime="2022-10-16 18:14">Date</time>
+            </small>    
+        </footer>
+    </body>
+</html>

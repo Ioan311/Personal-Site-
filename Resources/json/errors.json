@@ -1,0 +1,41 @@
+{
+    "cale_baza": "Resources/Images/errors",
+    "eroare_default":{
+        "titlu":"Error !!!",
+        "text": "Something went wrong",
+        "imagine":"dieselcar.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404 - oops!",
+            "text": "Something went wrong",
+            "imagine":"stop.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403 - oops!",
+            "text": "Something went wrong",
+            "imagine":"stop.png"
+        },
+        
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"We are working for this",
+            "text": "Something went wrong",
+            "imagine":"stop.png"
+        },
+        
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Datebase error",
+            "text": "Comeback later",
+            "imagine":"stop.png"
+        }
+    ]
+}
+  

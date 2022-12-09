@@ -1,6 +1,6 @@
-# Personal-Site-
+# Personal-WebSite-
 
-I just started with a simple HTML page, then I generated pages using Java Script.
+I just started with a simple HTML page, then I generated pages using Node.js
 For menu styling I used CSS, also CSS helps me to manipulate other objects from layout by using transitions and animations. One interesting thing for the menu is
 about screen resolutions, my website was made for 3 screen types (a mobile one, a medium one, a large one) and for each of these resolutions the menu display changes
 and some animatons are disabled.

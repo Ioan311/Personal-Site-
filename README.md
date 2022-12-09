@@ -7,3 +7,7 @@ and some animatons are disabled.
 
 I generated special error pages for different types of errors by using Java Script (403 and 404 - custom title)
 I added a VTT file for a video, because I wanted to have subtitles.
+
+
+Bibliography: 
+https://www.w3schools.com/

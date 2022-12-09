@@ -6,7 +6,7 @@ about screen resolutions, my website was made for 3 screen types (a mobile one, 
 and some animatons are disabled.
 
 I generated special error pages for different types of errors by using Java Script (403 and 404 - custom title)
-I added a VTT file for a video, because I wanted to have subtitles.
+I added a VTT file for a video, because I wanted to have subtitles..
 
 
 Bibliography: 

@@ -48,7 +48,8 @@
 }
 
 #grid-galerie figcaption:hover {
-
+  background-color: whitesmoke;
+  color: #89CFF0;
 }
 
 @media screen and (max-width:750px){

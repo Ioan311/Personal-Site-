@@ -1,0 +1,21 @@
+@mixin coverer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .video_wheel {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    &, video {
+      @include coverer;
+    }
+    video {
+      background: brown;
+      object-fit: cover;
+    }
+  }

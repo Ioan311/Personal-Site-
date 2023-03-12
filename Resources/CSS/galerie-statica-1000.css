@@ -5,10 +5,31 @@
   
 #grid-galerie {
     display:grid;
-    grid-template-columns: repeat(2,1fr);
     grid-row-gap:0.5em;
     grid-column-gap:0.5em;
+    grid-template-columns: 1fr 1fr;
 }
+
+#grid-galerie>figure:nth-child(6) {
+    grid-area: auto;
+  }
+  
+  #grid-galerie>figure:nth-child(7) {
+    grid-area: auto;
+  }
+  
+  #grid-galerie>figure:nth-child(8) {
+    grid-area: auto;
+  }
+  
+  #grid-galerie>figure:nth-child(9) {
+    grid-area: auto;
+  }
+  
+  #grid-galerie>figure:nth-child(10) {
+    grid-area: auto;
+  }
+
 #grid-galerie img{
     width: 100%;
 }

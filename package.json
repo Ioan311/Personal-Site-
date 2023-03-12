@@ -13,6 +13,10 @@
   "author": "Ioan Marcu",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.2.3",
+    "formidable": "^2.1.1",
+    "pg": "^8.8.0",
+    "sass": "^1.56.2",
     "sharp": "^0.31.2"
   }
 }

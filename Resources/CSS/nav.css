@@ -179,6 +179,36 @@ ul.menu>li:hover {
 		text-align:center;
 		margin-left:1cm;
     }
+
+    /* MENU  */
+    ul.menu {
+        display: block;
+        /** scoate punctul de la lista **/
+        list-style-type: disc;
+        padding: 10px;
+        margin: 10px;
+        width: 100%;
+    }
+
+    /** pt a lua fiii directi **/
+    ul.menu>li {
+        height: auto;
+        line-height: var(--height-menu);
+        /** aliniere la mijlocul liniei de text **/
+        vertical-align: middle;
+        /**
+        border: 1px solid black; **/
+        width: 100%;
+    }
+
+    nav {
+        height: auto;
+    }
+
+    .menu {
+        display: grid;
+        page-break-after: always;
+    }
     #absolut {
         position: absolute;
 		display: inline-block;
@@ -187,10 +217,6 @@ ul.menu>li:hover {
 		height:20px;
 		right:0;
 		overflow: visible;
-    }
-    .menu {
-      display: grid;
-      page-break-after: always;
     }
     main {
       page-break-after: always;

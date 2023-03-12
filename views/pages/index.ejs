@@ -26,7 +26,20 @@
     <body>
         <!-- includem header -->
         <%- include("../fragments/header.ejs") %>    
-        <div class="cars"></div>
+        <div class="cars">
+            <div class="container">
+                <label id="switch" class="switch">
+                        <input type="checkbox" onchange="myFunction()" id="slider">
+                        <span class="slider round"></span>
+                    </label>
+                <!-- <button id="switch" onclick="toggleTheme()">Switch</button> -->
+              </div>
+              <script>
+                    function myFunction() {
+                        var element = document.body;
+                        element.classList.toggle("dark-mode");}
+              </script>
+        </div>
         <main>
             <!-- 6 - 7 impartire in headere + minim 2 taguri per section  -->
             <!-- Etapa 2 impartire grid -->  
@@ -58,6 +71,8 @@
                 </section>
                 <section id="steel">
                     <h2>Steel Wheels</h2>
+                    <p class="c1 c2 c3"></p>
+                    <p class="c1 c3"></p>
                     <p>Steel wheels are available in a variety of designs and sizes. Here are a few of the design types.</p>
                     <blockquote cite="https://www.blackburnwheels.com/alloy-wheels-vs-steel-wheels-pros-cons-guide/">For drivers looking for a cheaper more durable alternative, steel wheels are the way to go. Steel wheels are significantly an ideal choice for use in the Winter and for more powerful vehicles.</blockquote>
                     <!-- 8) adaugare poza + redimensionari-->
@@ -163,14 +178,10 @@
                 </section>
                 <section id="newsletter">
                     <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter and get 5% extra discount on your purchases</p>
-                    <!-- adaugare video vtt etapa 3
-                        controls preaload ca sa poate fi vizionat
-                    -->
+                    <p>Subscribe to our newsletter and get 5% extra discount on your purchases <button class="btn btn-primary">Subscribe here</button></p>
                     <video class="hid" width="320" height="240" controls preload="none" poster="Resources/Images/bmw.jpg">
                         <source src="Resources/Videos/BMWwheels_presentation-L'Export_Solutions™.mp4" type="video/mp4">
                         <source src="Resources/Videos/BMWwheels_presentation-L'Export_Solutions™.avi" type="video/avi">
-                        
                         <track label="English" kind="subtitles" srclang="en" src="Resources/Vtt/WEBVTT.vtt" default>
                         <track label="Romanian" kind="subtitles" srclang="ro" src="Resources/Vtt/WEBVTTro.vtt">
                     </video>
@@ -182,6 +193,15 @@
                 </section>
                 <section id="prizes">
                     <p>When you subscribe to our newsletter you will automatically be entered into our raffle for a set of limited edition aluminium wheels </p>
+                    <div id="container">
+                        <div id="text">
+                            Winners Table
+                            <div id="reflected-text">Winners Table</div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
                     <div class="scrollbar">
                     <table class="winners-table">
                         <caption><b>Monthly Winners</b></caption>
@@ -227,6 +247,7 @@
                         </tfoot>
                     </table>
                     </div>
+                    <div id="image1"></div>
                     <br>
                     <br>
                     <br>

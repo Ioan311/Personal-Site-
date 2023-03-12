@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="Wheels is a new show that looks at how wheeled vehicles are built and bought, and what they can do.">
+        <meta name="keywords" content="steel wheels, aluminum alloy wheels, silver wheels, Wheels Auto ">
+        <!--
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" /> -->
+        <title>Wheels Auto - Reviste</title>
+        <%- include("../fragments/head.ejs") %>     
+        <!--<script type="text/javascript" src=/Resources/js/products.js></script> -->
+     </head>
+    <body>
+    <%- include("../fragments/header.ejs") %>
+
+    <main>
+        <section id="revistele">
+            <% revistele.forEach(revista => { %>
+                <article class="revista" id="idr-<%= revista.id %>">
+                  <h2><em><u><%= revista.titlu %> (<%= revista.numar_pagini %> pagini)</u></em></h2>
+                  <p>Aparitie: <%= revista.aparitie %> / Pret: <%= revista.pret %></p>
+                  <ul>
+                    <% revista.tematici.split(',').forEach(tematica => { %>
+                      <li><%= tematica %></li>
+                    <% }); %>
+                  </ul>
+                </article>
+              <% }); %>
+        </section>
+    </main>
+
+    <%- include("../fragments/footer.ejs") %>
+    </body>
+</html>

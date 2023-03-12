@@ -246,6 +246,14 @@ iframe.vidd {
     /* am gasit proprietatea care dubleaza width-ul borderului -> in cazul de fata cu 0.5 mai mult width fata de borderul initial */
     border-width: 0.5em;
 }
+
+/* pozitia statica le bloca si nu ma lasa sa mut div-ul, asa ca am facut-o relativa */
+.tabs-iframe a {
+    position: relative;
+    left: 200px;
+    bottom: 10px;
+}
+
 /* displayin' table */
 table.winners-table {
     display: table;
@@ -254,5 +262,111 @@ table.winners-table {
     border: 0px; 
 }
 
+.winners-table {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+/* creare text cu reflexie */
+#reflected-text{
+	position:absolute;
+	left:0;
+	top:100%;
+	transform-origin:0 0;
+	/*conetaza ordinea transformarilor!*/
+	transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px,-25px); 
+	opacity:0.55;
+    --mask-image:repeating-radial-gradient(ellipse farthest-side at 20% 20%, black, transparent,black 11%);
+    /*creeaza unde eliptice si schimba poz */ 
+    --mask1:repeating-radial-gradient(ellipse farthest-side at 20% 20%, black, transparent,black 12%);
+    --mask2:repeating-radial-gradient(ellipse farthest-side at 20% 20%, black, transparent,black 13%);
+    --mask3:repeating-radial-gradient(ellipse farthest-side at 20% 20%, black, transparent,black 14%);
+    --mask4:repeating-radial-gradient(ellipse farthest-side at 20% 20%, black, transparent,black 13%);
+    --mask5:repeating-radial-gradient(ellipse farthest-side at 20% 20%, black, transparent,black 12%);
+    mask-image: var(--mask-image);
+    -webkit-mask-image:var(--mask-image);
+}
+
+@keyframes reflexion-movement {
+    100%{
+        mask-image: var(--mask1);
+        -webkit-mask-image:var(--mask1) ;
+        mask-image: var(--mask2);
+        -webkit-mask-image:var(--mask2) ;
+        mask-image: var(--mask3);
+        -webkit-mask-image:var(--mask3) ;
+        mask-image: var(--mask4);
+        -webkit-mask-image:var(--mask4) ;
+        mask-image: var(--mask5);
+        -webkit-mask-image:var(--mask5) ;
+        -webkit-mask-position: left;
+        mask-position: left;
+    }
+}
+
+#reflected-text:hover{
+    position: absolute;
+    animation: reflexion-movement 0.5s infinite alternate;
+}
+
+#text{	
+    position: absolute;
+}
+
+#text, #reflected-text{
+	font-size:50px;
+	line-height:50px;
+	font-weight: bold;
+}
+
+#container {
+    margin: auto;
+    width: 37%;  
+}
+
+/* EFECT DUOTONE */
+#image1{
+	position:relative; 
+	background-image:url("../Images/wheel1.jpg");
+	background-size:cover; /* redimensioneaza imag pentru a umple continerul (ata pe inaltime, cat si pe latime) */
+	width:500px; 
+	height: 500px;
+	filter:brightness(200%) grayscale(0) ; /* brightness dubleaza luminozitatea imag || grayscale nu pune niciun efect */
+	transition:all 2s linear;
+    display: inline-block; /* inline-block respecta marginile si padding-urile */
+    margin: 20px; /* creeaza spatiu in jurul elementelor */
+}
+
+#image1:after, #image1:before{ /* ::after si ::before insereaza continut dupa/inainte de elem selectat */
+	content:" ";
+	position:absolute; /* pozitionare dupa cel mai apropiat ascendent */
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	transition:all 1s linear;
+}
+
+#image1::after{ /* face imaginea in aqua si mai luminoasa la inceput */
+	background-color: aqua;
+	mix-blend-mode:lighten; /* mix-blend-mode stabilieste modul in care continutul unui elem sa se 
+                            amestece cu continutul parintelui sau si cu fundalul elem
+                            lighten -> compara culorile de baza si culorile din stratul de amestecare si pastreaza culoarea mai deschisa
+    */
+}
+
+#image1::before{ /* daca nu ar exista ::after s-ar lua culoarea rosie -> adica before-ul */
+	background-color:rgb(255, 0, 0);
+	mix-blend-mode:darken; /* pastreaza culorile mai inchise */
+}
+
+#image1:hover::before{
+    background-color: black;
+	mix-blend-mode:lighten;
+}
+
+#image1:hover::after{
+	background-color:rgb(255, 0, 0);
+	mix-blend-mode:darken;
+}
 

@@ -1,0 +1,23 @@
+/* video care se comporta ca si background */
+.video_wheel {
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+.video_wheel, .video_wheel video, .video_wheel{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.video_wheel video {
+  background: brown;
+  object-fit: cover;
+}
+.video_wheel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

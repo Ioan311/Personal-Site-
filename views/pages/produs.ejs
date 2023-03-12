@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- aici nu-mi vedea css-urile, asa ca le-am adaugat manual -->
+        <meta name="description" content="Wheels is a new show that looks at how wheeled vehicles are built and bought, and what they can do.">
+        <meta name="keywords" content="steel wheels, aluminum alloy wheels, silver wheels, Wheels Auto ">
+        <title>Wheels Auto - Products</title>
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+        <%- include("../fragments/head.ejs") %>  
+        <meta charset="utf-8" />
+        <meta name="author" content="Marcu Ioan">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="../../Resources/Images/ico/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Resources/Images/ico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../Resources/Images/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../Resources/Images/ico/favicon-16x16.png">
+        <link rel="manifest" href="../../Resources/Images/ico/site.webmanifest">
+        <link rel="mask-icon" href="../../Resources/Images/ico/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-config" content="Resources/Images/ico/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../Resources/CSS/libraries/custom.css" type="text/css" />
+        <link rel="stylesheet" href="../../Resources/CSS/galerie-statica-1000.css" type="text/css" media="only screen and (min-width:751px) and (max-width:999px)" />
+        <link rel="stylesheet" href="../../Resources/CSS/galerie-statica.css" type="text/css" />
+        <link rel="stylesheet" href="../../Resources/CSS/galerie-statica-750.css" type="text/css" />
+        <link rel="stylesheet" href="../../Resources/CSS/nav.css" type="text/css" />
+        <link rel="stylesheet" href="../..Resources/CSS/nav-750.css" type="text/css" media="screen and (max-width:750px)" />
+        <link rel="stylesheet" href="../../Resources/CSS/nav-1000.css" type="text/css" media="only screen and (min-width:751px) and (max-width:999px)" />
+        <!-- <link rel="stylesheet" href="Resources/SCSS/nav.css" type="text/css" /> 
+        navigatie generata prin scss care funtioneaza la fel ca cea originala --> 
+        <!-- adaugare logo casuta meniu -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Etapa 2 legatura cu layout.css -->
+        <link rel="stylesheet" href="../../Resources/CSS/layout.css" type="text/css" />       
+    </head>
+    <body>
+    <%- include("../fragments/header.ejs") %>
+
+    <main>
+        <section>
+            <h2>Product page</h2>
+                <article id="art-produs">
+                    <h3><span class="name"><%- locals.prod.name %></span></h3>
+                    <p>Price: <span class="price"><%- locals.prod.price %> </span></p>
+                    <p>Description: <span class="description"><%- locals.prod.description %> </span></p>
+                    <p>Material: <span class="material"><%- locals.prod.material %> </span></p>
+                    <p>Continent: <span class="continent"><%- locals.prod.continent %> </span></p>
+                    <p>Load: <span class="load"><%- locals.prod.load %> </span></p>
+                    <p>Size: <span class="size"><%- locals.prod.size %> </span></p>
+                    <p>Voucher: <span class="voucher"><%- locals.prod.apply_voucher %> </span></p>
+                    <p>Date: <span class="date"><%- locals.prod.date %> </span></p>
+                    <figure class="imag-produs">
+                        <img  src="/Resources/Images/products/<%- locals.prod.image %>" alt="[image <%- locals.prod.name %>]" />
+                    </figure>    
+                </article>
+            
+        </section>
+    </main>
+
+    <%- include("../fragments/footer.ejs") %>
+    </body>
+</html>
